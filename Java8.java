@@ -125,3 +125,19 @@
 //    }
 //}
 //METHOD OF OVERLAODING.
+//class Animals{
+//    void eat(){
+//        System.out.println("Dal Chaman");
+//    }
+//}
+//class Dogs extends Animals{
+//    void eat(){
+//        System.out.println("Milk");
+//    }
+//}
+//public class Java8 {
+//    public static void main(String[] args) {
+//        Animals a= new Dogs();
+//        a.eat();
+//    }
+//
