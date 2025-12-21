@@ -29,6 +29,6 @@ public class Java23_3{
         String str=sc.next();
         solution2 obj = new solution2();
      int result= obj.lengthOfLongestSubstring(str);
-     System.out.println(result+"Length of string:");
+     System.out.println("Length of string:"+result);
     }
         }
