@@ -1,6 +1,6 @@
-import javax.swing.table.TableCellEditor;
-import java.awt.*;
-import java.util.Scanner;
+// import javax.swing.table.TableCellEditor;
+// import java.awt.*;
+// import java.util.Scanner;
 
 //Method of overwriting.
 //class Animal {
