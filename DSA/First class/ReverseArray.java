@@ -92,33 +92,102 @@
 //wap to print array in right rotation.
 import java.util.*;
 
-public class RightRotation {
+// public class RightRotation {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+
+//         int n = sc.nextInt();
+//         int arr[] = new int[n];
+
+//         // input
+//         for(int i = 0; i < n; i++){
+//             arr[i] = sc.nextInt();
+//         }
+
+//         // right rotation by 1
+//         int last = arr[n - 1];   // last element save
+
+//         for(int i = n - 1; i > 0; i--){
+//             arr[i] = arr[i - 1]; // shift right
+//         }
+
+//         arr[0] = last; // last element ko front me daal diya
+
+//         // print result
+//         for(int i = 0; i < n; i++){
+//             System.out.print(arr[i] + " ");
+//         }
+//     }
+// }
+
+//wap to inverse .
+// import java.util.Scanner;
+
+// public class InverseArray {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+
+//         System.out.print("Enter size: ");
+//         int n = sc.nextInt();
+
+//         int arr[] = new int[n];
+
+//         // Input
+//         System.out.println("Enter elements (0 to " + (n-1) + "):");
+//         for(int i = 0; i < n; i++){
+//             arr[i] = sc.nextInt();
+//         }
+
+//         int inverse[] = new int[n];
+
+//         // Inverse logic
+//         for(int i = 0; i < n; i++){
+//             inverse[arr[i]] = i;
+//         }
+
+//         // Output
+//         System.out.println("Inverse array:");
+//         for(int i = 0; i < n; i++){
+//             System.out.print(inverse[i] + " ");
+//         }
+//     }
+// }
+//wap to reverse an array.
+import java.util.Scanner;
+
+public class ReverseArray {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        System.out.print("Enter size: ");
         int n = sc.nextInt();
+
         int arr[] = new int[n];
 
-        // input
+        // Input
+        System.out.println("Enter elements:");
         for(int i = 0; i < n; i++){
             arr[i] = sc.nextInt();
         }
 
-        // right rotation by 1
-        int last = arr[n - 1];   // last element save
+        // Reverse logic
+        int start = 0;
+        int end = n - 1;
 
-        for(int i = n - 1; i > 0; i--){
-            arr[i] = arr[i - 1]; // shift right
+        while(start < end){
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+
+            start++;
+            end--;
         }
 
-        arr[0] = last; // last element ko front me daal diya
-
-        // print result
+        // Output
+        System.out.println("Reversed array:");
         for(int i = 0; i < n; i++){
             System.out.print(arr[i] + " ");
         }
     }
 }
 
-//wap to inverse .
-// wp to reverse.0
