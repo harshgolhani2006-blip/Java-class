@@ -92,38 +92,38 @@ import java.util.Scanner;
 //         }
 //     }
 // }
-import java.util.Scanner;
+// import java.util.Scanner;
 
-public class Sixth {
-    public static void main(String[] args) {
+// public class Sixth {
+//     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+//         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter the value of n :- ");
-        int n = sc.nextInt();
+//         System.out.print("Enter the value of n :- ");
+//         int n = sc.nextInt();
 
-        for(int i = 1; i <= n; i++) {
+//         for(int i = 1; i <= n; i++) {
 
-            // print spaces
-            for(int j = i; j < n; j++) {
-                System.out.print(" ");
-            }
+//             // print spaces
+//             for(int j = i; j < n; j++) {
+//                 System.out.print(" ");
+//             }
 
-            // print stars and spaces
-            for(int j = 1; j <= (2 * i - 1); j++) {
+//             // print stars and spaces
+//             for(int j = 1; j <= (2 * i - 1); j++) {
 
-                if(j == 1 || j == (2 * i - 1) || i == n) {
-                    System.out.print("*");
-                } else {
-                    System.out.print(" ");
-                }
-            }
+//                 if(j == 1 || j == (2 * i - 1) || i == n) {
+//                     System.out.print("*");
+//                 } else {
+//                     System.out.print(" ");
+//                 }
+//             }
 
-            // move to next line
-            System.out.println();
-        }
-    }
-}
+//             // move to next line
+//             System.out.println();
+//         }
+//     }
+// }
 // public class Seventh {
 //     public static void main(String[] args) {
 //          Scanner sc = new Scanner(System.in);
@@ -160,23 +160,23 @@ public class Sixth {
 // }
 // }
 
-// public class Nineth{
-//     public static void main(String[] args) {
-//      Scanner sc = new Scanner(System.in);
-//          System.out.print("Enter the value of n :- ");
-//         int n = sc.nextInt();
-//         for(int i=1;i<=n;i++){
-//             for(int j=1;j<=i;j++){
-//                 System.out.print("*");
-//             }
-//             System.out.println();
-//         }
-//         for(int i=n-1;i>=1;i--){
-//             for(int j=1;j<=i;j++){
-//                 System.out.print("*");
-//             }
-//             System.out.println();
-//         }
-// }
-// }
+public class Nineth{
+    public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+         System.out.print("Enter the value of n :- ");
+        int n = sc.nextInt();
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for(int i=n-1;i>=1;i--){
+            for(int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+}
+}
 
