@@ -1,3 +1,5 @@
+import java.util.List;
+
 class Node{
     int data;
     Node next;
@@ -74,6 +76,18 @@ class LinkedList{
         }
         System.out.println("Middle element: " + slow.data);
     }
+        boolean hasLoop(){
+            Node slow = head;
+             Node fast = head;
+            while(fast != null && fast.next != null){
+                slow = slow.next;
+                fast = fast.next.next;
+                if(slow == fast){
+                    return true;
+                }
+            }
+            return false;
+        }
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
         list.insert(10);
@@ -93,5 +107,12 @@ class LinkedList{
         list.display();
         System.out.println();
         list.middle();
+
+       list.head.next.next.next = list.head; // Creating a loop for testing
+        if(list.hasLoop()){
+            System.out.println("Loop Detected");
+        }else{
+            System.out.println("Loop not Detected");
+        }
     }
 }
