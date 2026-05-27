@@ -88,6 +88,40 @@ class LinkedList{
             }
             return false;
         }
+        void nthNode(int n){
+            Node temp = head;
+            int count = 1;
+            while(temp != null){
+                if(count == n){
+                    System.out.println("Nth node: " + temp.data);
+                    return;
+                }
+                count++;
+                temp = temp.next;
+            }
+            System.out.println("Nth node not found: " + n);
+        }
+        void merge(LinkedList list1, LinkedList list2){
+            Node temp1 = list1.head;
+            Node temp2 = list2.head;
+            while(temp1 != null && temp2 != null){
+                if(temp1.data < temp2.data){
+                    insert(temp1.data);
+                    temp1 = temp1.next;
+                }else{
+                    insert(temp2.data);
+                    temp2 = temp2.next;
+                }
+            }
+            while(temp1 != null){
+                insert(temp1.data);
+                temp1 = temp1.next;
+            }
+            while(temp2 != null){
+                insert(temp2.data);
+                temp2 = temp2.next;
+            }
+        }
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
         list.insert(10);
@@ -114,5 +148,9 @@ class LinkedList{
         }else{
             System.out.println("Loop not Detected");
         }
+        list.nthNode(2);
+        list.display();
+        list.merge(list, list);
+        list.display();
     }
 }
