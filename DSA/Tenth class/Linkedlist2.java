@@ -219,6 +219,61 @@ import java.util.*;
 // }
  
 //wap to rmove duplicates from a sorted linked list
+// class Node{
+//     int data;
+//     Node next;
+//     Node(int data){
+//         this.data=data;
+//         this.next=null;
+//     }
+// }
+// class Linkedlist2{
+//     Node head;
+//     void insert(int data){
+//         Node newnode=new Node(data);
+//         if(head==null){
+//             head=newnode;
+//             return;
+//         }
+//         Node temp=head;
+//         while(temp.next!=null){
+//             temp=temp.next;
+//         }
+//         temp.next=newnode;
+//     }
+//     void display(){
+//         Node temp=head;
+//         while(temp!=null){
+//             System.out.print(temp.data+" ");
+//             temp=temp.next;
+//         }
+//         System.out.println();
+//     }
+//     void removeDuplicates(){
+//         Node temp=head;
+//         while(temp!=null && temp.next!=null){
+//             if(temp.data==temp.next.data){
+//                 temp.next=temp.next.next;
+//             }else{
+//                 temp=temp.next;
+//             }
+//         }
+//     }
+//     public static void main(String[] args) {
+//         Linkedlist2 ll=new Linkedlist2();
+//         ll.insert(1);
+//         ll.insert(1);
+//         ll.insert(2);
+//         ll.insert(3);
+//         ll.insert(3);
+//         ll.display();
+//         ll.removeDuplicates();
+//         ll.display();
+//     }
+// }
+
+
+//wap to divide a linked list into two halves
 class Node{
     int data;
     Node next;
@@ -249,25 +304,36 @@ class Linkedlist2{
         }
         System.out.println();
     }
-    void removeDuplicates(){
-        Node temp=head;
-        while(temp!=null && temp.next!=null){
-            if(temp.data==temp.next.data){
-                temp.next=temp.next.next;
-            }else{
-                temp=temp.next;
-            }
+    void divide(){
+        if(head==null || head.next==null){
+            return;
         }
+        Node slow=head;
+        Node fast=head;
+        while(fast!=null && fast.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+        }
+        Node secondHalf=slow.next;
+        slow.next=null;
+        Linkedlist2 firstList=new Linkedlist2();
+        firstList.head=head;
+        Linkedlist2 secondList=new Linkedlist2();
+        secondList.head=secondHalf;
+        System.out.println("First half:");
+        firstList.display();
+        System.out.println("Second half:");
+        secondList.display();
     }
     public static void main(String[] args) {
         Linkedlist2 ll=new Linkedlist2();
         ll.insert(1);
-        ll.insert(1);
         ll.insert(2);
         ll.insert(3);
-        ll.insert(3);
+        ll.insert(4);
+        ll.insert(5);
+        ll.insert(6);
         ll.display();
-        ll.removeDuplicates();
-        ll.display();
+        ll.divide();
     }
 }
