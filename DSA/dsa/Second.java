@@ -24,4 +24,3 @@ public class Second {
         System.out.println("Sum: " + sum);
     }
 }
-
