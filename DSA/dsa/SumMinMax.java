@@ -24,3 +24,5 @@ public class SumMinMax {
         System.out.println("Sum: " + sum);
     }
 }
+
+
